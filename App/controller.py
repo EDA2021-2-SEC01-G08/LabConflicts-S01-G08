@@ -20,6 +20,7 @@
  * along withthis program.  If not, see <http://www.gnu.org/licenses/>.
  """
 
+from App.model import addBookTags
 import config as cf
 import model
 import csv
@@ -53,5 +54,5 @@ def loadTags(filename):
 
 
 def loadBooksTags(catalog):
-    # TODO: Modificación de Est-1 y Est-2 en el Lab 2
-    pass
+    btfile = cf.data_dir + filename
+    return model.addBookTags(btfile)
